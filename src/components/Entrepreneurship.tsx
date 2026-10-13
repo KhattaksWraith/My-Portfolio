@@ -4,7 +4,7 @@ import "./Entrepreneurship.css";
 export default function Entrepreneurship() {
   return (
     <section className="section section-alt" aria-label="Entrepreneurship and digital work">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">{dawgDeals.eyebrow}</span>
         <h2>{dawgDeals.title}</h2>
         <p className="entre-intro">{dawgDeals.text}</p>

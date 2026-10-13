@@ -4,7 +4,7 @@ import "./Leadership.css";
 export default function Leadership() {
   return (
     <section className="section" aria-label="Leadership, volunteering, and awards">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">Beyond the lab</span>
         <h2>Leadership, volunteering, and awards.</h2>
         <div className="lead-grid">

@@ -4,7 +4,7 @@ import "./Thesis.css";
 export default function Thesis() {
   return (
     <section className="thesis-block" id="research" aria-label="Undergraduate thesis">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">Featured research</span>
         <h2 className="thesis-title">{thesis.title}</h2>
 

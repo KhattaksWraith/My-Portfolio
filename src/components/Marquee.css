@@ -1,0 +1,17 @@
+.marquee {
+  overflow: hidden;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  background: var(--bg);
+}
+
+.marquee-track {
+  font-size: clamp(3rem, 8vw, 7rem);
+  display: inline-block;
+}
+
+.marquee-track span {
+  display: inline-block;
+  padding-right: 2rem;
+}

@@ -4,7 +4,7 @@ import "./Experience.css";
 export default function Experience() {
   return (
     <section className="section" id="experience" aria-label="Professional experience">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">Experience</span>
         <h2>Where I have worked.</h2>
         <div className="exp-list">

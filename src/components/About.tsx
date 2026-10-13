@@ -36,10 +36,10 @@ export default function About() {
       <div className="wrap about-grid">
         <div className="about-photo">
           <img
-            src="/assets/portrait.jpg"
-            alt="Formal portrait of Waleed Ahmed"
-            width={900}
-            height={1027}
+            src="/assets/portrait-about.jpg"
+            alt="Portrait of Waleed Ahmed"
+            width={800}
+            height={1202}
             loading="lazy"
           />
         </div>

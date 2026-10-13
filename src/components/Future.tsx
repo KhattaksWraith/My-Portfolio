@@ -4,7 +4,7 @@ import "./Future.css";
 export default function Future() {
   return (
     <section className="section" aria-label="Future research interests">
-      <div className="wrap future-inner">
+      <div className="wrap future-inner reveal-up">
         <span className="eyebrow">{future.eyebrow}</span>
         <h2>{future.title}</h2>
         <p className="future-text">{future.text}</p>

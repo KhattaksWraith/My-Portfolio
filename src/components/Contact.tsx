@@ -4,7 +4,7 @@ import "./Contact.css";
 export default function Contact() {
   return (
     <section className="section section-alt" id="contact" aria-label="Contact">
-      <div className="wrap contact-inner">
+      <div className="wrap contact-inner reveal-up">
         <span className="eyebrow">{contact.eyebrow}</span>
         <h2>{contact.heading}</h2>
         <p className="contact-text">{contact.text}</p>

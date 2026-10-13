@@ -1,7 +1,20 @@
 .journey-intro {
   max-width: 36rem;
   font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.journey-scene-wrap {
+  display: flex;
+  justify-content: center;
   margin-bottom: 3rem;
+}
+
+.journey-scene {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
 }
 
 .journey-list {

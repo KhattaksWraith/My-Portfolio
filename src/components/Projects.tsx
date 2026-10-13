@@ -4,7 +4,7 @@ import "./Projects.css";
 export default function Projects() {
   return (
     <section className="section section-alt" id="projects" aria-label="Academic projects">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">Projects</span>
         <h2>Research and course projects.</h2>
         <p className="projects-intro">

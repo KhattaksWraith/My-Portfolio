@@ -4,7 +4,7 @@ import "./Skills.css";
 export default function Skills() {
   return (
     <section className="section section-alt" aria-label="Technical skills">
-      <div className="wrap">
+      <div className="wrap reveal-up">
         <span className="eyebrow">Skills</span>
         <h2>What I work with.</h2>
         <div className="skills-grid">

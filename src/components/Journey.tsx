@@ -6,6 +6,52 @@ import "./Journey.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/** Original flat-2D SVG scene: a young student with a backpack walking toward a school. */
+function SchoolScene() {
+  return (
+    <svg viewBox="0 0 600 420" role="img" aria-label="Illustration of a young student walking toward a school" className="journey-scene">
+      <rect x="0" y="0" width="600" height="420" rx="24" fill="var(--bg-alt)" />
+      <circle cx="490" cy="80" r="42" fill="var(--accent)" opacity="0.85" />
+      <g fill="var(--surface)" opacity="0.9">
+        <ellipse cx="140" cy="80" rx="46" ry="18" />
+        <ellipse cx="175" cy="70" rx="34" ry="15" />
+        <ellipse cx="380" cy="120" rx="38" ry="14" />
+      </g>
+      <g>
+        <rect x="330" y="150" width="220" height="150" rx="8" fill="var(--surface)" stroke="var(--hairline)" strokeWidth="3" />
+        <rect x="310" y="120" width="260" height="40" rx="8" fill="var(--cta-dark)" />
+        <rect x="425" y="70" width="30" height="55" fill="var(--cta-dark)" />
+        <rect x="420" y="60" width="40" height="14" rx="4" fill="var(--cta-dark)" />
+        <g fill="var(--bg-alt)" stroke="var(--hairline)" strokeWidth="2">
+          <rect x="350" y="180" width="40" height="50" rx="6" />
+          <rect x="405" y="180" width="40" height="50" rx="6" />
+          <rect x="460" y="180" width="40" height="50" rx="6" />
+        </g>
+        <rect x="415" y="240" width="50" height="60" rx="8" fill="var(--accent)" />
+        <circle cx="455" cy="272" r="4" fill="#fff" />
+        <rect x="380" y="128" width="120" height="22" rx="11" fill="var(--accent)" />
+      </g>
+      <rect x="0" y="300" width="600" height="120" fill="var(--surface)" opacity="0.55" />
+      <path d="M180 420 L260 300 L360 300 L300 420 Z" fill="var(--hairline)" />
+      <g>
+        <rect x="60" y="240" width="14" height="70" rx="6" fill="var(--cta-dark)" opacity="0.75" />
+        <circle cx="67" cy="220" r="38" fill="var(--accent)" opacity="0.35" />
+        <rect x="560" y="250" width="12" height="60" rx="6" fill="var(--cta-dark)" opacity="0.75" />
+        <circle cx="566" cy="232" r="30" fill="var(--accent)" opacity="0.35" />
+      </g>
+      <g transform="translate(215 235)">
+        <rect x="-34" y="28" width="26" height="40" rx="10" fill="var(--accent)" />
+        <rect x="-30" y="36" width="18" height="12" rx="6" fill="#fff" opacity="0.5" />
+        <rect x="-8" y="66" width="10" height="34" rx="5" fill="var(--cta-dark)" />
+        <rect x="6" y="66" width="10" height="34" rx="5" fill="var(--cta-dark)" />
+        <rect x="-12" y="26" width="32" height="46" rx="12" fill="var(--ink)" />
+        <circle cx="4" cy="10" r="16" fill="var(--ink)" />
+        <rect x="18" y="30" width="9" height="30" rx="4.5" fill="var(--ink)" transform="rotate(-24 22 32)" />
+      </g>
+    </svg>
+  );
+}
+
 /** Small original flat motif per era. */
 function EraArt({ index }: { index: number }) {
   const accent = "var(--accent)";
@@ -106,6 +152,10 @@ export default function Journey() {
         <span className="eyebrow">The journey</span>
         <h2>A life in progress,<br />from curiosity to creation.</h2>
         <p className="journey-intro">Scroll through the chapters. Each one shaped what came next.</p>
+
+        <div className="journey-scene-wrap">
+          <SchoolScene />
+        </div>
 
         <div className="journey-list">
           <div className="journey-rail" aria-hidden="true">

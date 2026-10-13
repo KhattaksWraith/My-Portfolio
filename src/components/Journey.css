@@ -1,0 +1,89 @@
+.journey-intro {
+  max-width: 36rem;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.journey-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.journey-rail {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--hairline);
+  overflow: hidden;
+}
+
+.journey-progress {
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.journey-era { position: relative; }
+
+.journey-era::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 2.2rem;
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  transform: translateX(1px);
+  border-radius: 50%;
+  background: var(--surface);
+  border: 4px solid var(--accent);
+}
+
+.journey-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.era-art {
+  width: 120px;
+  height: 110px;
+  background: var(--bg-alt);
+  border-radius: 18px;
+}
+
+.journey-year {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin: 0 0 0.25rem;
+}
+
+.journey-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.journey-card p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .journey-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .era-art { width: 96px; height: 88px; }
+}

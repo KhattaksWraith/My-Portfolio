@@ -1,0 +1,184 @@
+/* Theme — Inexa visual direction, original implementation.
+   Light: pale sage-cream + warm near-black + violet accent.
+   Dark: deep charcoal + soft gray + same violet accent. */
+
+:root,
+[data-theme="light"] {
+  --bg: #f1f5e9;
+  --bg-alt: #edf1e3;
+  --surface: #ffffff;
+  --ink: #1b1e19;
+  --muted: #6d7368;
+  --accent: #7c5cfa;
+  --accent-ink: #ffffff;
+  --cta-dark: #181818;
+  --hairline: #e2e6d8;
+  --outline-stroke: #d9ddd2;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --shadow: 0 10px 30px -12px rgba(27, 30, 25, 0.18);
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg: #121210;
+  --bg-alt: #161614;
+  --surface: #1d1d1b;
+  --ink: #b2b2b0;
+  --muted: #8b8b89;
+  --accent: #7c5cfa;
+  --accent-ink: #ffffff;
+  --cta-dark: #f2f2f0;
+  --hairline: #2a2a28;
+  --outline-stroke: #33332f;
+  --nav-bg: rgba(30, 30, 28, 0.92);
+  --shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; }
+h3 { font-size: 1.35rem; font-weight: 700; }
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Layout helpers */
+.wrap {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(64px, 9vw, 120px) 0;
+}
+
+.section-alt { background: var(--bg-alt); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  margin-bottom: 1.2rem;
+}
+
+/* Giant outline display text (Inexa signature) */
+.outline-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--outline-stroke);
+  text-stroke: 1.5px var(--outline-stroke);
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn:hover { transform: translateY(-3px); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 24px -8px rgba(124, 92, 250, 0.6);
+}
+
+.btn-dark {
+  background: var(--cta-dark);
+  color: var(--bg);
+}
+
+.btn-outline {
+  border-color: var(--hairline);
+  color: var(--ink);
+  background: transparent;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.5rem;
+}
+
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reduced motion: kill non-essential animation */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}

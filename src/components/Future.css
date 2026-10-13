@@ -1,0 +1,34 @@
+.future-inner {
+  text-align: center;
+  max-width: 800px;
+}
+
+.future-text {
+  font-size: 1.15rem;
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+
+.future-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.future-tags span {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--shadow);
+  border-radius: 999px;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.future-note {
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0;
+}

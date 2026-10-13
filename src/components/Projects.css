@@ -1,0 +1,50 @@
+.projects-intro {
+  max-width: 38rem;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover { transform: translateY(-4px); }
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-text { margin-bottom: 1rem; }
+
+.project-card ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.2rem;
+  flex: 1;
+}
+
+.project-card li { margin-bottom: 0.35rem; }
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-skills span {
+  background: var(--bg-alt);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink);
+}

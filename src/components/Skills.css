@@ -1,0 +1,28 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.skill-card { padding: 2rem; }
+
+.skill-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tags span {
+  background: var(--bg-alt);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+}

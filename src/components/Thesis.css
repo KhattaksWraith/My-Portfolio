@@ -1,0 +1,120 @@
+.thesis-block {
+  background: #131311;
+  color: #b2b2b0;
+  padding: clamp(64px, 9vw, 120px) 0;
+}
+
+.thesis-block h2,
+.thesis-block h3 {
+  color: #f2f2f0;
+}
+
+.thesis-block .eyebrow { color: var(--accent); }
+
+.thesis-title {
+  max-width: 56rem;
+  margin-bottom: 2.5rem;
+}
+
+.thesis-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 0 3rem;
+}
+
+.thesis-meta > div {
+  background: #131311;
+  padding: 1.25rem 1.5rem;
+}
+
+.thesis-meta dt {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8b8b89;
+  margin-bottom: 0.3rem;
+}
+
+.thesis-meta dd {
+  margin: 0;
+  color: #f2f2f0;
+  font-weight: 600;
+}
+
+.thesis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.thesis-grid h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.thesis-grid ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.thesis-grid li { margin-bottom: 0.4rem; }
+
+.tag-list {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-list li {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  color: #f2f2f0;
+  margin-bottom: 0 !important;
+}
+
+.thesis-note {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.thesis-note h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+
+.thesis-disclaimer {
+  font-size: 0.9rem;
+  color: #8b8b89;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.thesis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #f2f2f0;
+}
+
+.btn-outline-light:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .thesis-grid { grid-template-columns: 1fr; }
+}
